@@ -1,2 +1,2 @@
-# home
-@import "{{ site.theme }}";
+# Website
+Website Templates
