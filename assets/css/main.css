@@ -1040,14 +1040,14 @@ section,
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-  padding: 60px 30px 60px 70px;
+  padding: 40px 30px 40px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-
+ 
 .services .service-item .icon {
   position: absolute;
   left: -20px;
