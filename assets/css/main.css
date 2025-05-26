@@ -1037,10 +1037,18 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+img.hover-zoom-move {
+  transition: transform 0.3s ease;
+}
+img.hover-zoom-move:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px 50px 50px 50px;
+  padding: 20px 50px 50px 50px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
