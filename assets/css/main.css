@@ -2728,9 +2728,13 @@ textarea#chat-input {
   resize: none;
 }
 
+.b-link {
+  color: #000;
+}
+
 a#send-it {
   color: #555;
-  width: 40px;
+  width: 50px;
   margin: -5px 0 0 5px;
   font-weight: 700;
   padding: 8px;

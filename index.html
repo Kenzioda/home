@@ -1071,10 +1071,10 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
               <div>
                 <h2><u>Lokasi Kami</u></h2>
                 <h3>Kantor Pusat</h3>
-                <p>Golf Lake Residence Rukan Venice, Jl. Lkr. Luar Barat No. B 108 , RT.9/RW.14,, Cengkareng, Jakarta Barat, DKI Jakarta, Indonesia, 11730</p>
+                <p><a href="https://maps.app.goo.gl/VrsuNZEnEd6yuyW39" class="b-link">Golf Lake Residence Rukan Venice, Jl. Lkr. Luar Barat No. B 108 , RT.9/RW.14,, Cengkareng, Jakarta Barat, DKI Jakarta, Indonesia, 11730</a></p>
                 <h3>Kantor Tebet</h3>
-                <p>1, Jl. KH Abdullah Syafei No.21C, RT.1/RW.3, Kb. Baru, Kec. Tebet, Daerah Khusus Ibukota Jakarta 12830
-                </p>
+                <p><a href="https://maps.app.goo.gl/wRQg1FRkBkCMw8dEA" class="b-link">1, Jl. KH Abdullah Syafei No.21C, RT.1/RW.3, Kb. Baru, Kec. Tebet, Daerah Khusus Ibukota Jakarta 12830
+                </a></p>
               </div>
             </div><!-- End Info Item -->
 
@@ -1082,7 +1082,8 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p><a href="tel:082225884515" class="b-link">+62 822-2588-4515</a></p>
+                <p><a href="tel:081285945935" class="b-link">+62 812-8594-5935</a></p>
               </div>
             </div><!-- End Info Item -->
 
@@ -1090,7 +1091,7 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p><a href="mailto:info@example.com" class="b-link">info@example.com</a></p>
               </div>
             </div><!-- End Info Item -->
 
@@ -1178,7 +1179,7 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
       <div id="get-nama"></div>
     </div>
     <div class="head-home">
-      <h3>Hallo !</h3>
+      <h3>Hallo!</h3>
       <p>Pilih salah satu Customer Service kami di bawah ini untuk mengobrol di WhatsApp</p>
     </div>
   </div>
@@ -1187,8 +1188,8 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
     <a class="informasi" href="javascript:void(0)" title="Chat Whatsapp">
       <div class="info-avatar"><img src="https://cdn-icons-png.flaticon.com/512/236/236831.png"/></div>
       <div class="info-chat">
-        <span class="chat-label">Sales</span>
-        <span class="chat-nama">Customer Service</span>
+        <span class="chat-label">Customer Service</span>
+        <span class="chat-nama">Sales</span>
       </div>
       <span class="my-number">6282225884515</span>
     </a>
@@ -1197,36 +1198,32 @@ PT JANNAH FIRDAUS UMRAH AND HAJJ SERVICES</span> telah berdiri sejak tahun 2003 
     <a class="informasi" href="javascript:void(0)" title="Chat Whatsapp">
       <div class="info-avatar"><img src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png"/></div>
       <div class="info-chat">
-        <span class="chat-label">Support</span>
-        <span class="chat-nama">Customer Service</span>
+        <span class="chat-label">Customer Service</span>
+        <span class="chat-nama">Support</span>
       </div>
       <span class="my-number">6281285945935</span>
     </a>
     <!-- Info Contact End -->
-  <div class="blanter-msg">Hubungi Kami: <jannahfirdaus class="com"></jannahfirdaus></div>
+    <div class="blanter-msg">Hubungi Kami: <span href="">Jannah Firdaus</span></div>
+  </div>
+  <!-- Move .start-chat outside .home-chat -->
   <div class="start-chat" style="display:none;">
-    <a href="javascript:void(0);" class="back-chat">← Kembali</a>
-    <div class="first-msg"><span>Hallo, sudah siap berangkat umroh & haji ?</span></div>
-    <!--<div class="blanter-msg">
-      <textarea id="chat-input" placeholder="Pesan teks" maxlength="120" row="flex"></textarea>
-      <a href="javascript:void(0);" id="send-it">Kirim</a>
-    </div>-->
+    <div class="first-msg"><span style="text-align: left;">Assalamualaikum Warrahmatullahi Wabarakatuh,<br><br>sudah siap berangkat umroh & haji ?</span></div>
     <div class="blanter-msg">
       <textarea id="chat-input" placeholder="Pesan teks" maxlength="120" rows="1" style="overflow:hidden;resize:none;" oninput="autoExpand(this)"></textarea>
       <a href="javascript:void(0);" id="send-it">Kirim</a>
     </div>
-<script>
-  function autoExpand(textarea) {
-  textarea.style.height = 'auto';
-  textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px'; // 120px is the max height
-}
-</script>
   </div>
   <div id="get-number" style="display:none;"></div>
   <a class="close-chat" href="javascript:void(0);">×</a>
 </div>
 
 <script>
+function autoExpand(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px'; // 120px is the max height
+}
+
 document.querySelector('.whatsapp-btn').addEventListener('click', function() {
   var chatBox = document.getElementById('whatsapp-chat');
   chatBox.style.display = (chatBox.style.display === 'block') ? 'none' : 'block';
@@ -1236,8 +1233,8 @@ document.querySelector('.whatsapp-btn').addEventListener('click', function() {
 document.querySelectorAll('.informasi').forEach(function(el) {
   el.addEventListener('click', function() {
     var number = this.querySelector('.my-number').textContent.trim();
-    var name = this.querySelector('.chat-nama').textContent.trim();
-    var label = this.querySelector('.chat-label').textContent.trim();
+    var name = this.querySelector('.chat-nama') ? this.querySelector('.chat-nama').textContent.trim() : '';
+    var label = this.querySelector('.chat-label') ? this.querySelector('.chat-label').textContent.trim() : '';
 
     document.getElementById('get-number').textContent = number;
     document.getElementById('get-nama').textContent = name;
