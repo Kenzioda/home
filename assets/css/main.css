@@ -156,11 +156,6 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
-}
-
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -2732,6 +2727,10 @@ textarea#chat-input {
   color: #000;
 }
 
+.w-link{
+  color:#fff
+}
+
 a#send-it {
   color: #555;
   width: 50px;
@@ -2925,4 +2924,56 @@ a.close-chat {
   margin-bottom: 5px;
   padding: 5px;
   width: 100%;
+}
+
+#header.shrink {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#header.shrink .logo img {
+  height: 32px !important;
+}
+
+#header.shrink .logo-text,
+#header.shrink .logo span {
+  font-size: 1rem !important;
+}
+
+/* Responsive: adjust for small screens */
+@media (max-width: 600px) {
+  #header.shrink .logo img {
+    height: 24px !important;
+  }
+  #header.shrink .logo-text,
+  #header.shrink .logo span {
+    font-size: 0.9rem !important;
+  }
+}
+
+#header {
+  transition: padding 1.2s, box-shadow 1.2s;
+}
+
+#header .logo img {
+  transition: height 1.2s
+}
+
+#header .logo-text,
+#header .logo span {
+  transition: font-size 1.2s, letter-spacing 1.2s, color 1.2s;
+}
+
+#header .logo .logo-large {
+  height: 80px;
+  max-height: 80px;
+  width: auto;
+  display: block;
+  transition: height 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+#header.shrink .logo .logo-large {
+  height: 32px !important;
+  max-height: 32px;
+  transition: height 1.2s cubic-bezier(0.4,0,0.2,1);
 }
