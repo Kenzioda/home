@@ -71,6 +71,14 @@
   document.addEventListener('DOMContentLoaded', function() {
   const preloader = document.querySelector('#preloader');
   if (preloader) preloader.remove();
+  if (heroVideo) {
+    heroVideo.addEventListener('loadeddata', function() {
+      if (preloader) preloader.remove();
+      // Optionally, reveal other content here
+    });
+  } else {
+    if (preloader) preloader.remove();
+  }
 });
 
   /**
