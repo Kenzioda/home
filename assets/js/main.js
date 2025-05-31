@@ -68,18 +68,27 @@
   }
    */
 
-  document.addEventListener('DOMContentLoaded', function() {
-  const preloader = document.querySelector('#preloader');
-  if (preloader) preloader.remove();
-  if (heroVideo) {
-    heroVideo.addEventListener('loadeddata', function() {
-      if (preloader) preloader.remove();
-      // Optionally, reveal other content here
-    });
-  } else {
-    if (preloader) preloader.remove();
-  }
-});
+const preloader = document.querySelector('#preloader');
+const heroVideo = document.querySelector('#hero-video');
+
+if (preloader && heroVideo) {
+  // Remove preloader when the hero video is ready to play
+  heroVideo.addEventListener('load', () => {
+    preloader.remove();
+  });
+
+  // Fallback: remove preloader after 5 seconds if video doesn't load
+  setTimeout(() => {
+    if (document.body.contains(preloader)) {
+      preloader.remove();
+    }
+  }, 5000);
+} else if (preloader) {
+  // If no hero video, remove preloader on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', () => {
+    preloader.remove();
+  });
+}
 
   /**
    * Scroll top button
