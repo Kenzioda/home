@@ -2963,16 +2963,16 @@ a.close-chat {
 }
 
 #header {
-  transition: padding 1.2s, box-shadow 1.2s;
+  transition: padding 0.8s, box-shadow 0.8s;
 }
 
 #header .logo img {
-  transition: height 1.2s
+  transition: height 0.8s
 }
 
 #header .logo-text,
 #header .logo span {
-  transition: font-size 1.2s, letter-spacing 1.2s, color 1.2s;
+  transition: font-size 0.8s, letter-spacing 0.8s, color 0.8s;
 }
 
 #header .logo .logo-large {
@@ -2980,10 +2980,10 @@ a.close-chat {
   max-height: 80px;
   width: auto;
   display: block;
-  transition: height 1.2s cubic-bezier(0.4,0,0.2,1);
+  transition: height 0.8s cubic-bezier(0.4,0,0.2,1);
 }
 #header.shrink .logo .logo-large {
   height: 32px !important;
   max-height: 32px;
-  transition: height 1.2s cubic-bezier(0.4,0,0.2,1);
+  transition: height 0.8s cubic-bezier(0.4,0,0.2,1);
 }
