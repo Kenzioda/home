@@ -73,7 +73,7 @@ const heroVideo = document.querySelector('#hero-video');
 
 if (preloader && heroVideo) {
   // Remove preloader when the hero video is ready to play
-  heroVideo.addEventListener('load', () => {
+  heroVideo.addEventListener('loadeddata', () => {
     preloader.remove();
   });
 
@@ -82,7 +82,7 @@ if (preloader && heroVideo) {
     if (document.body.contains(preloader)) {
       preloader.remove();
     }
-  }, 5000);
+  }, 6000);
 } else if (preloader) {
   // If no hero video, remove preloader on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
