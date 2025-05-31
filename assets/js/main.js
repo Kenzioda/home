@@ -60,13 +60,18 @@
 
   /**
    * Preloader
-   */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove();
     });
   }
+   */
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const preloader = document.querySelector('#preloader');
+  if (preloader) preloader.remove();
+});
 
   /**
    * Scroll top button
