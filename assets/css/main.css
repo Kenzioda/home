@@ -2594,6 +2594,16 @@ section,
 
 /* CSS Multiple WhatsApp Chat by Maks Miliyan */
 
+.wa-fade {
+  opacity: 0;
+  transition: opacity 0.8s;
+  pointer-events: none;
+}
+.wa-fade.wa-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #whatsapp-chat {
   position: fixed;
   background: #fff;
