@@ -1,0 +1,65 @@
+/* Styling for the Crowdfunding Platform */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Tailwind's slate-50 */
+}
+
+/* Chart container responsiveness */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 32rem; /* h-128 */
+    max-height: 75vh;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 24rem; /* h-96 */
+    }
+}
+
+/* Navigation link transitions */
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #0f766e; /* Tailwind's teal-700 */
+}
+
+/* Detail card animations */
+.detail-card {
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(10px);
+}
+
+/* Loading spinner for AI generations */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0f766e;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Language flag styling */
+.lang-flag {
+    font-size: 24px; /* Adjust size as needed for flag emojis */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures the flag emoji stays within the circle */
+}
