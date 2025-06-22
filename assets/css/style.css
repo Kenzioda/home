@@ -1,0 +1,18 @@
+/* ...existing code... */
+:root {
+  --primary: #0062d3; /* BootstrapMade blue */
+  --primary-hover: #0056b3; /* Slightly darker for hover states */
+  /* ...other variables... */
+}
+/* ...existing code... */
+
+/* Example: update any direct color usage */
+.btn-primary,
+a,
+.navbar,
+.header,
+.footer {
+  background-color: var(--primary);
+  color: #fff;
+}
+/* ...existing code... */
