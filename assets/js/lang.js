@@ -42,7 +42,7 @@ const languages = [
     { code: 'bg', name: 'Bulgarian', flag: '🇧🇬' },
     { code: 'ar', name: 'Arabic', flag: '🇸🇦' },
     { code: 'sq', name: 'Albanian', flag: '🇦🇱' }
-].sort((a, b) => b.name.localeCompare(a.name)); // Alphabetical descending order
+].sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical ascending order
 
 // ...translations object (copy the entire translations object here, unchanged)...
 
