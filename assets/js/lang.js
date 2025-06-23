@@ -63,7 +63,7 @@ languages.forEach(lang => {
     langItem.style.cursor = 'pointer';
     langItem.innerHTML = `
         <span class="lang-flag">${lang.flag}</span>
-        <span class="text-sm font-medium text-slate-700 ms-2">( ${lang.country} ) ${lang.name}</span>
+        <span class="text-sm font-medium text-slate-700 ms-2">(${lang.country}) ${lang.name}</span>
     `;
     langItem.addEventListener('click', () => {
         loadTranslation(lang.code); // Use dynamic loading
