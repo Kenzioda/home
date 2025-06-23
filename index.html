@@ -57,56 +57,58 @@
           <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
           <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
           <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
-          <!-- Add more languages as needed -->
+          <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
+          <li><a class="dropdown-item" href="#" data-lang="id">Bahasa Indonesia</a></li>
+          <!-- Add more languages as needed, matching lang.js -->
         </ul>
       </div>
 
       <nav id="navmenu" class="navmenu order-1">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+          <li class="dropdown"><a href="about.html"><span data-i18n="nav.about">About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="admissions.html">Admissions</a></li>
-              <li><a href="academics.html">Academics</a></li>
-              <li><a href="faculty-staff.html">Faculty &amp; Staff</a></li>
-              <li><a href="campus-facilities.html">Campus &amp; Facilities</a></li>
+              <li><a href="about.html" data-i18n="nav.about_us">About Us</a></li>
+              <li><a href="admissions.html" data-i18n="nav.admissions">Admissions</a></li>
+              <li><a href="academics.html" data-i18n="nav.academics">Academics</a></li>
+              <li><a href="faculty-staff.html" data-i18n="nav.faculty_staff">Faculty &amp; Staff</a></li>
+              <li><a href="campus-facilities.html" data-i18n="nav.campus_facilities">Campus &amp; Facilities</a></li>
             </ul>
           </li>
 
-          <li><a href="students-life.html">Students Life</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="alumni.html">Alumni</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="students-life.html" data-i18n="nav.students_life">Students Life</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="alumni.html" data-i18n="nav.alumni">Alumni</a></li>
+          <li class="dropdown"><a href="#"><span data-i18n="nav.more_pages">More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="news-details.html">News Details</a></li>
-              <li><a href="event-details.html">Event Details</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="terms-of-service.html">Terms of Service</a></li>
-              <li><a href="404.html">Error 404</a></li>
-              <li><a href="starter-page.html">Starter Page</a></li>
+              <li><a href="news-details.html" data-i18n="nav.news_details">News Details</a></li>
+              <li><a href="event-details.html" data-i18n="nav.event_details">Event Details</a></li>
+              <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+              <li><a href="terms-of-service.html" data-i18n="nav.terms">Terms of Service</a></li>
+              <li><a href="404.html" data-i18n="nav.error404">Error 404</a></li>
+              <li><a href="starter-page.html" data-i18n="nav.starter_page">Starter Page</a></li>
             </ul>
           </li>
 
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span data-i18n="nav.dropdown">Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li><a href="#" data-i18n="nav.dropdown1">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span data-i18n="nav.deep_dropdown">Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li><a href="#" data-i18n="nav.deep_dropdown1">Deep Dropdown 1</a></li>
+                  <li><a href="#" data-i18n="nav.deep_dropdown2">Deep Dropdown 2</a></li>
+                  <li><a href="#" data-i18n="nav.deep_dropdown3">Deep Dropdown 3</a></li>
+                  <li><a href="#" data-i18n="nav.deep_dropdown4">Deep Dropdown 4</a></li>
+                  <li><a href="#" data-i18n="nav.deep_dropdown5">Deep Dropdown 5</a></li>
                 </ul>
               </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="#" data-i18n="nav.dropdown2">Dropdown 2</a></li>
+              <li><a href="#" data-i18n="nav.dropdown3">Dropdown 3</a></li>
+              <li><a href="#" data-i18n="nav.dropdown4">Dropdown 4</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -128,11 +130,11 @@
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
               <div class="hero-content">
-                <h1>Empowering Futures Through Investments</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam ornare, imperdiet est eget, pretium augue. Nullam auctor felis in nibh gravida, eu viverra risus egestas.</p>
+                <h1 data-i18n="hero.title">Empowering Futures Through Investments</h1>
+                <p data-i18n="hero.subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam ornare, imperdiet est eget, pretium augue. Nullam auctor felis in nibh gravida, eu viverra risus egestas.</p>
                 <div class="cta-buttons">
-                  <a href="#" class="btn-primary">Start Your Journey</a>
-                  <a href="#" class="btn-secondary">Discover Programs</a>
+                  <a href="#" class="btn-primary" data-i18n="hero.cta1">Start Your Journey</a>
+                  <a href="#" class="btn-secondary" data-i18n="hero.cta2">Discover Programs</a>
                 </div>
               </div>
             </div>
