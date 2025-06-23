@@ -5,8 +5,13 @@ const currentLangFlag = document.getElementById('current-lang-flag');
 const currentLangName = document.getElementById('current-lang-name');
 const langDropdown = document.getElementById('lang-dropdown');
 
+const currentLangButtonMobile = document.getElementById('current-lang-button-mobile');
+const currentLangFlagMobile = document.getElementById('current-lang-flag-mobile');
+const currentLangNameMobile = document.getElementById('current-lang-name-mobile');
+const langDropdownMobile = document.getElementById('lang-dropdown-mobile');
+
 const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸', country: 'US' },
+    { code: 'en', name: 'English', flag: '🇬🇧', country: 'GB' },
     { code: 'es', name: 'Spanish', flag: '🇪🇸', country: 'ES' },
     { code: 'fr', name: 'French', flag: '🇫🇷', country: 'FR' },
     { code: 'de', name: 'German', flag: '🇩🇪', country: 'DE' },
@@ -55,44 +60,78 @@ async function translateTextWithLLM(text, targetLangCode) {
     // ...existing code for translateTextWithLLM...
 }
 
-// Populate language dropdown
-langDropdown.innerHTML = '';
-languages.forEach(lang => {
-    const langItem = document.createElement('li');
-    langItem.className = 'dropdown-item';
-    langItem.style.cursor = 'pointer';
-    langItem.innerHTML = `
-        <span class="lang-flag">${lang.flag}</span>
-        <span class="text-sm font-medium text-slate-700 ms-2">(${lang.country}) ${lang.name}</span>
-    `;
-    langItem.addEventListener('click', () => {
-        loadTranslation(lang.code); // Use dynamic loading
-        langDropdown.classList.add('hidden');
-    });
-    langDropdown.appendChild(langItem);
-});
+// Only show these languages in the dropdown
+const visibleDropdownLangs = languages.filter(lang => ['en', 'id'].includes(lang.code));
 
-// Toggle language dropdown
+// --- SYNC BOTH DROPDOWNS ---
+
+// Populate both dropdowns
+function populateLangDropdowns() {
+    // Desktop
+    langDropdown.innerHTML = '';
+    // Mobile
+    langDropdownMobile.innerHTML = '';
+    visibleDropdownLangs.forEach(lang => {
+        // Desktop item
+        const langItem = document.createElement('li');
+        langItem.className = 'dropdown-item';
+        langItem.style.cursor = 'pointer';
+        langItem.innerHTML = `
+            <span class="lang-flag">(${lang.country})</span>
+            <span class="text-sm font-medium text-slate-700 ms-2">${lang.name}</span>
+        `;
+        langItem.addEventListener('click', () => {
+            loadTranslation(lang.code);
+            langDropdown.classList.add('hidden');
+            langDropdownMobile.classList.add('hidden');
+        });
+        langDropdown.appendChild(langItem);
+        // Mobile item
+        const langItemMobile = langItem.cloneNode(true);
+        langItemMobile.addEventListener('click', () => {
+            loadTranslation(lang.code);
+            langDropdown.classList.add('hidden');
+            langDropdownMobile.classList.add('hidden');
+        });
+        langDropdownMobile.appendChild(langItemMobile);
+    });
+}
+populateLangDropdowns();
+
+// Toggle dropdowns
 currentLangButton.addEventListener('click', (event) => {
     langDropdown.classList.toggle('hidden');
+    langDropdownMobile.classList.add('hidden');
     event.stopPropagation();
 });
-
-// Close dropdown when clicking outside
-document.addEventListener('click', (event) => {
-    if (!langDropdown.contains(event.target) && !currentLangButton.contains(event.target)) {
+currentLangButtonMobile.addEventListener('click', (event) => {
+    langDropdownMobile.classList.toggle('hidden');
+    langDropdown.classList.add('hidden');
+    event.stopPropagation();
+});
+// Close both when clicking outside
+function closeLangDropdowns(e) {
+    if (!langDropdown.contains(e.target) && !currentLangButton.contains(e.target)) {
         langDropdown.classList.add('hidden');
     }
-});
+    if (!langDropdownMobile.contains(e.target) && !currentLangButtonMobile.contains(e.target)) {
+        langDropdownMobile.classList.add('hidden');
+    }
+}
+document.addEventListener('click', closeLangDropdowns);
 
+// Update both language buttons
 function setLanguage(langCode) {
     currentLang = langCode;
     const langData = translations[langCode] || translations['en'];
-
-    currentLangFlag.textContent = languages.find(l => l.code === langCode).flag;
-    currentLangName.textContent = languages.find(l => l.code === langCode).name;
+    const langObj = languages.find(l => l.code === langCode);
+    // Desktop
+    currentLangFlag.textContent = langObj.flag;
+    currentLangName.textContent = langObj.name;
+    // Mobile
+    currentLangFlagMobile.textContent = langObj.flag;
+    currentLangNameMobile.textContent = langObj.name;
     document.documentElement.lang = langCode;
-
     // Update all elements with data-lang or data-lang-key
     document.querySelectorAll('[data-lang], [data-lang-key]').forEach(element => {
         const key = element.getAttribute('data-lang') || element.getAttribute('data-lang-key');
@@ -131,19 +170,58 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Dynamic loading of translation files (example for large projects)
+// Online translation fallback (Microsoft Translator API example)
+async function translateOnline(texts, targetLang) {
+    // Replace with your real API key and endpoint
+    const apiKey = 'YOUR_MICROSOFT_TRANSLATOR_API_KEY';
+    const endpoint = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0';
+    const url = `${endpoint}&to=${targetLang}`;
+    const body = texts.map(t => ({ Text: t }));
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Ocp-Apim-Subscription-Key': apiKey,
+            'Ocp-Apim-Subscription-Region': 'YOUR_RESOURCE_REGION', // e.g., 'westeurope'
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+    const data = await response.json();
+    return data.map(item => item.translations[0].text);
+}
+
+// Modified loadTranslation to use online fallback for all available languages
 async function loadTranslation(langCode) {
     if (!translations[langCode]) {
         try {
-            const response = await fetch(`assets/lang/${langCode}.json`); // updated path from assets/i18n/ to assets/lang/
+            const response = await fetch(`assets/lang/${langCode}.json`);
             if (response.ok) {
                 const data = await response.json();
                 translations[langCode] = data;
                 setLanguage(langCode);
+                return;
             }
         } catch (e) {
-            // fallback to English
+            // continue to online fallback
+        }
+        // Online fallback for any language
+        const elements = document.querySelectorAll('[data-lang], [data-lang-key]');
+        const keys = Array.from(elements).map(el => el.getAttribute('data-lang') || el.getAttribute('data-lang-key'));
+        const enData = translations['en'] || {};
+        const texts = keys.map(k => enData[k] || k);
+        // Show loading indicator (optional)
+        document.body.style.cursor = 'wait';
+        try {
+            const translated = await translateOnline(texts, langCode);
+            // Build translation object
+            const obj = {};
+            keys.forEach((k, i) => { obj[k] = translated[i]; });
+            translations[langCode] = obj;
+            setLanguage(langCode);
+        } catch (err) {
             setLanguage('en');
+        } finally {
+            document.body.style.cursor = '';
         }
     } else {
         setLanguage(langCode);

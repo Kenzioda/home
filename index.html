@@ -45,37 +45,37 @@
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
         <i class="bi bi-buildings"></i>
-        <h1 class="sitename">NiceSchool</h1>
+        <h1 class="sitename">Funder</h1>
       </a>
 
       <nav id="navmenu" class="navmenu order-1">
         <ul>
-          <li><a href="index.html" class="active" data-lang="nav.home">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span data-lang="nav.about">About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="layanan.html"><span data-lang="nav.about">Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="about.html" data-lang="nav.about_us">About Us</a></li>
-              <li><a href="admissions.html" data-lang="nav.admissions">Admissions</a></li>
-              <li><a href="academics.html" data-lang="nav.academics">Academics</a></li>
-              <li><a href="faculty-staff.html" data-lang="nav.faculty_staff">Faculty &amp; Staff</a></li>
-              <li><a href="campus-facilities.html" data-lang="nav.campus_facilities">Campus &amp; Facilities</a></li>
+          <li><a href="layanan-investor.html" data-lang="nav.news">Investor</a></li>
+          <li><a href="layanan-pengelola.html" data-lang="nav.events">Pengelola</a></li>
+            </ul>
+          <li><a href="investasi.html" data-lang="nav.alumni">Investasi</a></li>
+          <li class="dropdown"><a href="about.html"><span data-lang="nav.about">Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html" data-lang="nav.about_us">Tentang Kami</a></li>
+              <li><a href="admissions.html" data-lang="nav.admissions">Bantuan</a></li>
+              <li><a href="academics.html" data-lang="nav.academics">Hubungi Kami</a></li>
+              <li><a href="faculty-staff.html" data-lang="nav.faculty_staff">Media &amp; Berita Terbaru</a></li>
+              <li><a href="campus-facilities.html" data-lang="nav.campus_facilities">
+                Fasilitas</a></li>
             </ul>
           </li>
-
-          <li><a href="students-life.html" data-lang="nav.students_life">Students Life</a></li>
-          <li><a href="news.html" data-lang="nav.news">News</a></li>
-          <li><a href="events.html" data-lang="nav.events">Events</a></li>
-          <li><a href="alumni.html" data-lang="nav.alumni">Alumni</a></li>
           <li class="dropdown"><a href="#"><span data-lang="nav.more_pages">More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="news-details.html" data-lang="nav.news_details">News Details</a></li>
               <li><a href="event-details.html" data-lang="nav.event_details">Event Details</a></li>
               <li><a href="privacy.html" data-lang="nav.privacy">Privacy</a></li>
               <li><a href="terms-of-service.html" data-lang="nav.terms">Terms of Service</a></li>
-              <li><a href="404.html" data-lang="nav.error404">Error 404</a></li>
-              <li><a href="starter-page.html" data-lang="nav.starter_page">Starter Page</a></li>
+              <li><a href="404.html" data-lang="nav.error404">Error 404</a></li>              
             </ul>
           </li>
-
+          <!--
           <li class="dropdown"><a href="#"><span data-lang="nav.dropdown">Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#" data-lang="nav.dropdown1">Dropdown 1</a></li>
@@ -93,22 +93,32 @@
               <li><a href="#" data-lang="nav.dropdown4">Dropdown 4</a></li>
             </ul>
           </li>
-
-          <!-- Language Dropdown (Navmenu Style) -->
-          <li class="dropdown lang-dropdown">
+          -->
+          <li><a href="contact.html" data-lang="nav.contact">Contact</a></li>
+          <li><a href="login.html" data-lang="nav.starter_page">Login</a></li>
+          <li><a href="login.html" data-lang="nav.starter_page">Daftar</a></li>
+          <!-- Language Dropdown (Navmenu Style, Desktop Only) -->
+          <li class="dropdown lang-dropdown d-none d-xl-block" id="lang-desktop">
             <a href="#" id="current-lang-button" class="d-flex align-items-center">
-              <span id="current-lang-flag" style="font-size:1.2rem;">(US)</span>
-              <span id="current-lang-name" class="ms-2 d-none d-md-inline">English</span>
+              <span id="current-lang-flag" style="font-size:1.2rem;">🇬🇧</span>
               <i class="bi bi-chevron-down ms-1"></i>
             </a>
-            <ul id="lang-dropdown" class="dropdown-menu dropdown-menu-end shadow-sm mt-2" style="min-width:200px; max-height:300px; overflow-y:auto;">
+            <ul id="lang-dropdown" class="dropdown-menu d-none d-xl-block dropdown">
               <!-- Language options will be injected by lang.js -->
             </ul>
           </li>
           <!-- End Language Dropdown -->
-
-          <li><a href="contact.html" data-lang="nav.contact">Contact</a></li>
         </ul>
+        <!-- Mobile Language Dropdown: always visible, left of burger icon on mobile -->
+        <div class="dropdown lang-dropdown d-xl-none me-2" id="lang-mobile" style="display:inline-block; vertical-align:middle; margin-right:0.5rem;">
+          <a href="#" id="current-lang-button-mobile" class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <span id="current-lang-flag-mobile" style="font-size:1.2rem;">🇬🇧</span>            
+            <i class="bi bi-chevron-down ms-1"></i>
+          </a>
+          <ul id="lang-dropdown-mobile" class="dropdown-menu" style="min-width:200px; max-height:300px; overflow-y:auto;">
+            <!-- Language options will be injected by lang.js -->
+          </ul>
+        </div>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -129,18 +139,18 @@
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
               <div class="hero-content">
-                <h1 data-i18n="hero.title">Empowering Futures Through Investments</h1>
-                <p data-i18n="hero.subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam ornare, imperdiet est eget, pretium augue. Nullam auctor felis in nibh gravida, eu viverra risus egestas.</p>
+                <h1 data-i18n="hero.title">Mentransformasi Masa Depan Melalui Investasi</h1>
+                <p data-i18n="hero.subtitle">Melalui investasi yang tepat, setiap individu maupun institusi dapat memberdayakan diri untuk mencapai tujuan jangka panjang, meningkatkan stabilitas ekonomi, dan membuka jalan menuju berbagai pencapaian baru.</p>
                 <div class="cta-buttons">
-                  <a href="#" class="btn-primary" data-i18n="hero.cta1">Start Your Journey</a>
-                  <a href="#" class="btn-secondary" data-i18n="hero.cta2">Discover Programs</a>
+                  <a href="#" class="btn-primary" data-i18n="hero.cta1">Mulai Perjalananmu</a>
+                  <a href="#" class="btn-secondary" data-i18n="hero.cta2">Jelajahi Program</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
               <div class="stats-card">
                 <div class="stats-header">
-                  <h3>Why Choose Us</h3>
+                  <h3>Kenapa Memilih Kami</h3>
                   <div class="decoration-line"></div>
                 </div>
                 <div class="stats-grid">
@@ -150,7 +160,7 @@
                     </div>
                     <div class="stat-content">
                       <h4>98%</h4>
-                      <p>Graduate Employment</p>
+                      <p>Lulusan Pekerja</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -158,8 +168,8 @@
                       <i class="bi bi-globe"></i>
                     </div>
                     <div class="stat-content">
-                      <h4>45+</h4>
-                      <p>International Partners</p>
+                      <h4>99+</h4>
+                      <p>Partner Internasional</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -167,8 +177,8 @@
                       <i class="bi bi-mortarboard"></i>
                     </div>
                     <div class="stat-content">
-                      <h4>15:1</h4>
-                      <p>Student-Faculty Ratio</p>
+                      <h4>Berizin</h4>
+                      <p>Sertifikasi & Lisensi Lengkap</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -176,8 +186,8 @@
                       <i class="bi bi-building"></i>
                     </div>
                     <div class="stat-content">
-                      <h4>120+</h4>
-                      <p>Degree Programs</p>
+                      <h4>Diawasi</h4>
+                      <p>OJK, Kominfo & Dll</p>
                     </div>
                   </div>
                 </div>
@@ -191,19 +201,8 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-md-6 col-xl-4 col-12 ticker-item">
-              <span class="date">NOV 15</span>
-              <span class="title">Open House Day</span>
-              <a href="#" class="btn-register">Register</a>
-            </div>
-            <div class="col-md-6 col-12 col-xl-4  ticker-item">
-              <span class="date">DEC 5</span>
-              <span class="title">Application Workshop</span>
-              <a href="#" class="btn-register">Register</a>
-            </div>
-            <div class="col-md-6 col-12 col-xl-4 ticker-item">
-              <span class="date">JAN 10</span>
-              <span class="title">International Student Orientation</span>
-              <a href="#" class="btn-register">Register</a>
+              <h2>Bersama Funder</h2>
+                <p>Investasi Bersama, Perluas Peluang.</p>
             </div>
           </div>
         </div>
@@ -470,8 +469,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Students Life</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Berkat Funder, kami</h2>
+        <p>Berkat Funder, kondisi ekonomi kami kini jauh lebih stabil. Kami juga mampu mewujudkan berbagai pencapaian yang sebelumnya hanya sebatas impian. Funder telah memberikan kepercayaan diri bagi kami untuk terus berkembang dan melampaui batas yang pernah kami bayangkan.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -774,103 +773,6 @@
       </div>
 
     </section><!-- /Stats Section -->
-
-    <!-- Recent News Section -->
-    <section id="recent-news" class="recent-news section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent News</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-1.webp" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Politics</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-2.webp" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Sports</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-3.webp" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/person/person-m-10.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div><!-- End recent posts list -->
-
-      </div>
-
-    </section><!-- /Recent News Section -->
 
     <!-- Events Section -->
     <section id="events" class="events section">
