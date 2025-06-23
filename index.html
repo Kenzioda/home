@@ -48,7 +48,20 @@
         <h1 class="sitename">NiceSchool</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <!-- Language Dropdown Button (always visible, top right) -->
+      <div class="dropdown lang-dropdown ms-auto order-2" style="margin-left:auto;">
+        <button class="btn btn-link dropdown-toggle p-0" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Language" style="font-size: 1.5rem;">
+          <i class="bi bi-globe"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+          <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+          <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+          <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
+          <!-- Add more languages as needed -->
+        </ul>
+      </div>
+
+      <nav id="navmenu" class="navmenu order-1">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -1124,7 +1137,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/lang.js"></script>
 </body>
-
 </html>
