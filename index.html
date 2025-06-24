@@ -96,11 +96,11 @@
           -->
           <li><a href="contact.html" data-lang="nav.contact">Contact</a></li>
           <li><a href="login.html" data-lang="nav.starter_page">Login</a></li>
-          <li><a href="login.html" data-lang="nav.starter_page">Daftar</a></li>
+          <li><a href="login.html" class="btn-primary" data-lang="hero.cta1">Daftar</a></li>
           <!-- Language Dropdown (Navmenu Style, Desktop Only) -->
           <li class="dropdown lang-dropdown d-none d-xl-block" id="lang-desktop">
             <a href="#" id="current-lang-button" class="d-flex align-items-center">
-              <span id="current-lang-flag" style="font-size:1.2rem;">🇬🇧</span>
+              <span id="current-lang-flag" style="font-size:1.2rem;">( 🇮🇩 )</span>
               <i class="bi bi-chevron-down ms-1"></i>
             </a>
             <ul id="lang-dropdown" class="dropdown-menu d-none d-xl-block dropdown">
@@ -112,7 +112,7 @@
         <!-- Mobile Language Dropdown: always visible, left of burger icon on mobile -->
         <div class="dropdown lang-dropdown d-xl-none me-2" id="lang-mobile" style="display:inline-block; vertical-align:middle; margin-right:0.5rem;">
           <a href="#" id="current-lang-button-mobile" class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="current-lang-flag-mobile" style="font-size:1.2rem;">🇬🇧</span>            
+            <span id="current-lang-flag-mobile" style="font-size:1.2rem;">( 🇮🇩 )</span>            
             <i class="bi bi-chevron-down ms-1"></i>
           </a>
           <ul id="lang-dropdown-mobile" class="dropdown-menu" style="min-width:200px; max-height:300px; overflow-y:auto;">
@@ -139,11 +139,11 @@
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
               <div class="hero-content">
-                <h1 data-i18n="hero.title">Mentransformasi Masa Depan Melalui Investasi</h1>
-                <p data-i18n="hero.subtitle">Melalui investasi yang tepat, setiap individu maupun institusi dapat memberdayakan diri untuk mencapai tujuan jangka panjang, meningkatkan stabilitas ekonomi, dan membuka jalan menuju berbagai pencapaian baru.</p>
+                <h1 data-lang="hero.title">Mentransformasi Masa Depan Melalui Investasi</h1>
+                <p data-lang="hero.subtitle">Melalui investasi yang tepat, setiap individu maupun institusi dapat memberdayakan diri untuk mencapai tujuan jangka panjang, meningkatkan stabilitas ekonomi, dan membuka jalan menuju berbagai pencapaian baru.</p>
                 <div class="cta-buttons">
-                  <a href="#" class="btn-primary" data-i18n="hero.cta1">Mulai Perjalananmu</a>
-                  <a href="#" class="btn-secondary" data-i18n="hero.cta2">Jelajahi Program</a>
+                  <a href="#" class="btn-primary" data-lang="hero.cta1">Mulai Perjalananmu</a>
+                  <a href="#" class="btn-secondary" data-lang="hero.cta2">Jelajahi Program</a>
                 </div>
               </div>
             </div>
@@ -251,36 +251,6 @@
           </div>
         </div>
 
-        <div class="row mission-vision-row g-4">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="value-card h-100">
-              <div class="card-icon">
-                <i class="bi bi-rocket-takeoff"></i>
-              </div>
-              <h3>Our Mission</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.</p>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="value-card h-100">
-              <div class="card-icon">
-                <i class="bi bi-eye"></i>
-              </div>
-              <h3>Our Vision</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="value-card h-100">
-              <div class="card-icon">
-                <i class="bi bi-star"></i>
-              </div>
-              <h3>Our Values</h3>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </section><!-- /About Section -->
@@ -290,18 +260,17 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Programs</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Daftar Investasi</h2>        
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <ul class="program-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All Programs</li>
-            <li data-filter=".filter-bachelor">Bachelor's</li>
-            <li data-filter=".filter-master">Master's</li>
-            <li data-filter=".filter-certificate">Certificates</li>
+            <li data-filter="*" class="filter-active">Semua Program</li>
+            <li data-filter=".filter-bachelor">Telah Selesai</li>
+            <li data-filter=".filter-master">Sedang Berlangsung</li>
+            <li data-filter=".filter-certificate">Yang akan Datang</li>
           </ul>
 
           <div class="row g-4 isotope-container">
@@ -731,210 +700,42 @@
             </div>
           </div>
         </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-12">
-            <div class="achievements-gallery" data-aos="fade-up" data-aos-delay="700">
-              <div class="row g-4">
-                <div class="col-md-4">
-                  <div class="achievement-item">
-                    <img src="assets/img/education/education-1.webp" alt="Achievement" class="img-fluid">
-                    <div class="achievement-content">
-                      <h4>Top-Ranked Programs</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ultricies magna.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="achievement-item">
-                    <img src="assets/img/education/education-2.webp" alt="Achievement" class="img-fluid">
-                    <div class="achievement-content">
-                      <h4>State-of-the-Art Facilities</h4>
-                      <p>Maecenas finibus convallis turpis, non facilisis justo egestas in. Nulla facilisi.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="achievement-item">
-                    <img src="assets/img/education/education-3.webp" alt="Achievement" class="img-fluid">
-                    <div class="achievement-content">
-                      <h4>Global Alumni Network</h4>
-                      <p>Fusce consectetur, enim eget aliquet volutpat, lacus nulla semper velit, et luctus.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
+      <!-- Moved Mission, Vision, Values -->
+    <div class="container about section" data-aos="fade-up" data-aos-delay="100">
+      <div class="row mission-vision-row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card h-100">
+            <div class="card-icon">
+              <i class="bi bi-rocket-takeoff"></i>
             </div>
+            <h3>Misi</h3>
+            <p>Menyediakan akses mudah ke informasi dan sumber daya relevan. Mendorong kolaborasi dan jaringan yang kuat. Menginspirasi inovasi dan pertumbuhan berkelanjutan.</p>
           </div>
         </div>
-
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card h-100">
+            <div class="card-icon">
+              <i class="bi bi-eye"></i>
+            </div>
+            <h3>Visi</h3>
+            <p>Membangun platform terdepan yang memberdayakan individu dan komunitas melalui informasi, konektivitas, dan inovasi.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card h-100">
+            <div class="card-icon">
+              <i class="bi bi-star"></i>
+            </div>
+            <h3>Prinsip Kami</h3>
+            <p>Aksesibilitas, Kolaborasi, Inovasi, Integritas, Pemberdayaan.</p>
+          </div>
+        </div>
       </div>
+    </div><!-- End Mission, Vision, Values -->
 
     </section><!-- /Stats Section -->
 
-    <!-- Events Section -->
-    <section id="events" class="events section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Events</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="event-filters mb-4">
-          <div class="row justify-content-center g-3">
-            <div class="col-md-4">
-              <select class="form-select">
-                <option selected="">All Months</option>
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-                <option>May</option>
-                <option>June</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <select class="form-select">
-                <option selected="">All Categories</option>
-                <option>Academic</option>
-                <option>Arts</option>
-                <option>Sports</option>
-                <option>Community</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4">
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">FEB</span>
-                <span class="day">15</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag academic">Academic</div>
-                <h3>Science Fair Exhibition</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>09:00 AM - 03:00 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Main Auditorium</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">MAR</span>
-                <span class="day">10</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag sports">Sports</div>
-                <h3>Annual Sports Day</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>08:30 AM - 05:00 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>School Playground</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">APR</span>
-                <span class="day">22</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag arts">Arts</div>
-                <h3>Spring Music Concert</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>06:30 PM - 08:30 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Performing Arts Center</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="event-card">
-              <div class="event-date">
-                <span class="month">MAY</span>
-                <span class="day">8</span>
-                <span class="year">2025</span>
-              </div>
-              <div class="event-content">
-                <div class="event-tag community">Community</div>
-                <h3>Parent-Teacher Conference</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
-                <div class="event-meta">
-                  <div class="meta-item">
-                    <i class="bi bi-clock"></i>
-                    <span>01:00 PM - 07:00 PM</span>
-                  </div>
-                  <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Various Classrooms</span>
-                  </div>
-                </div>
-                <div class="event-actions">
-                  <a href="#" class="btn-learn-more">Learn More</a>
-                  <a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="text-center mt-5">
-          <a href="#" class="btn-view-all">View All Events</a>
-        </div>
-
-      </div>
-
-    </section><!-- /Events Section -->
 
   </main>
 
