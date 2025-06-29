@@ -738,6 +738,13 @@ section,
   padding: 180px 0 80px 0;
 }
 
+@media (max-width: 576px) {
+  .hero .hero-container {
+    min-height: 50vh;
+    padding: 80px 0 40px 0;
+  }
+}
+
 .hero .hero-container .video-background {
   position: absolute;
   top: 0;
@@ -2102,6 +2109,8 @@ section,
   transform: translateY(-3px);
 }
 
+
+
 @media (max-width: 768px) {
   .events .event-card {
     flex-direction: column;
@@ -2795,11 +2804,22 @@ section,
   }
 }
 
-
-
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* Match About section App Store/Google Play button size to hero section CTA */
+.about .cta-buttons .btn.btn-dark,
+.about .cta-buttons .btn.btn-success {
+  height: 52px;
+  min-width: 160px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-family: var(--heading-font, "Raleway", sans-serif);
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
